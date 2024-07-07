@@ -176,36 +176,51 @@ body{
 
 /* ======= RESPONSIVE CSS ======== */
 
-@media only screen and (max-width:767px)
-{
-    .navbar-nav{
+/* ======= RESPONSIVE CSS ======== */
+
+/* ======= RESPONSIVE CSS ======== */
+
+@media only screen and (max-width: 767px) {
+    .navbar-nav {
         text-align: center;
     }
 
-    .carousel1 .carousel-caption{
-        
-        margin: auto;
+    .carousel1 .carousel-caption {
+        position: absolute; /* Ensure the text is positioned absolutely within the carousel */
+        top: 40%; /* Center the text vertically */
+        left: 50%; /* Center the text horizontally */
+        transform: translate(-50%, -50%); /* Center the text exactly */
+        width: 100%; /* Ensure the caption takes the full width */
+        text-align: center; /* Center-align the text */
+        margin: 0; /* Remove any default margin */
+        z-index: 10; /* Ensure the text is above other elements */
     }
-    .carousel1 .carousel-caption h5{
+
+    .carousel1 .carousel-caption h5 {
         padding: 10px 15px;
         font-size: 17px;
-
     }
 
-    .carousel1 .carousel-caption p{
-        /*padding: 10px 15px;*/
+    .carousel1 .carousel-caption p {
         font-size: 14px;
-        width:100%;
+        width: 90%;
         line-height: 1.6;
-
     }
-    
-    .about .about-text{
+
+    .carousel1 .carousel-item {
+        height: 80vh; /* Adjust the height to 50% of the viewport height for mobile */
+    }
+
+    .carousel1 .carousel-item img {
+        height: 80vh; /* Ensure the image also respects the height constraint */
+        object-fit: cover; /* Ensure the image covers the entire area */
+    }
+
+    .about .about-text {
         margin-top: 8%;
     }
 
-    .card{
+    .card {
         margin-bottom: 30px;
     }
-
 }
